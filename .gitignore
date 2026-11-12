@@ -1,0 +1,42 @@
+# ==========================================
+# GHCBT Master Git Ignore Configuration
+# ==========================================
+
+# 1. License & Local Hardware Activation (WAJIB: jangan push lisensi lokal)
+license.key
+application/cache/hw_id.cache
+
+# 2. Database Configuration (Agar password database masing-masing sekolah tidak tertimpa)
+application/config/database.php
+
+# 3. Cache & Logs
+application/cache/*
+!application/cache/index.html
+!application/cache/.gitkeep
+application/logs/*
+!application/logs/index.html
+!application/logs/.gitkeep
+
+# 4. User Uploaded Files (Foto siswa, lampiran soal lokal)
+uploads/*
+!uploads/index.html
+!uploads/.gitkeep
+public/uploads/*
+!public/uploads/index.html
+!public/uploads/.gitkeep
+
+# 5. OS & Temporary Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 6. IDE & Editor Files
+.idea/
+.vscode/
+nbproject/
+*.suo
+*.user
+.gemini/
+.agents/
+scratch/
+

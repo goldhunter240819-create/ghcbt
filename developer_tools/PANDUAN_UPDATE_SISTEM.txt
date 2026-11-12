@@ -1,0 +1,58 @@
+========================================================================
+             PANDUAN PENGGUNAAN SISTEM UPDATE & MAINTENANCE GHCBT
+                          "KELAS DEWA" EDITION
+========================================================================
+
+Fitur Smart Update System GHCBT dirancang untuk melakukan pembaruan 
+sistem secara otomatis tanpa menghapus data penting (foto/logo/database) 
+dan sudah dilengkapi dengan fitur auto-backup setiap kali update dijalankan.
+
+------------------------------------------------------------------------
+1. CARA MENYIAPKAN PAKET UPDATE (.ZIP)
+------------------------------------------------------------------------
+- Siapkan file update dalam format .ZIP (bukan .RAR).
+- Struktur folder di dalam ZIP harus sesuai dengan root aplikasi, 
+  misalnya: berisi folder 'application', 'system', 'public', dll.
+- Pastikan file 'index.php' terbaru juga ada jika memang ada perubahan inti.
+
+------------------------------------------------------------------------
+2. KEAMANAN DATA (PROTECTED PATHS)
+------------------------------------------------------------------------
+Sistem secara cerdas TIDAK AKAN menimpa file/folder berikut agar data 
+User tetap aman:
+- /uploads/ & /public/uploads/ (Seluruh foto peserta/soal)
+- /application/config/database.php (Konfigurasi database Anda)
+- /public/images/logo_modern.png, logo.png, favicon.png (Logo Anda)
+- .htaccess (Pengaturan server/URL)
+
+------------------------------------------------------------------------
+3. PROSES SMART UPDATE
+------------------------------------------------------------------------
+Saat Anda menekan tombol "JALANKAN UPDATE" di dashboard:
+a. Sistem otomatis membackup Database (.gz).
+b. Sistem otomatis membackup Source Code lama (.zip).
+c. Seluruh backup disimpan di folder: /public/backups/
+d. Sistem akan mengekstrak file baru dan menimpa file lama secara aman.
+e. Update selesai dan sistem akan mereload otomatis.
+
+------------------------------------------------------------------------
+4. TOOLS MAINTENANCE (AHLI)
+------------------------------------------------------------------------
+Di halaman Update, terdapat panel "Maintenance Tools" untuk kebutuhan manual:
+- BACKUP DATABASE: Mengunduh database SQL terbaru dalam format GZ.
+- BACKUP DATA ASSET: Mengunduh seluruh folder foto/upload dalam satu ZIP.
+- FLUSH SESSIONS: Menghapus seluruh sesi login (membersihkan database yang 
+  mulai lemot karena tumpukan sesi ujian).
+
+------------------------------------------------------------------------
+5. CATATAN PENTING
+------------------------------------------------------------------------
+- Pastikan folder 'public/backups/' memiliki izin tulis (writable).
+- Pastikan kuota disk server masih cukup untuk melakukan auto-backup 
+  sebelum proses update dimulai.
+- Jika terjadi kegagalan (misal server mati saat update), Anda bisa 
+  mengembalikan file lama menggunakan file backup di '/public/backups/'.
+
+------------------------------------------------------------------------
+Peluncuran Official: 27 April 2026
+------------------------------------------------------------------------

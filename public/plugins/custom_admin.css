@@ -1,0 +1,210 @@
+/* Zenith Elite Admin Design System - Theme Aware Edition */
+:root {
+    --zenith-gold: #f59e0b;
+    --zenith-gold-glow: rgba(245, 158, 11, 0.4);
+    --zenith-cyan: #06b6d4;
+    /* Map to Global Variables */
+    --zenith-glass: var(--glass-bg);
+    --zenith-border: var(--border-color);
+}
+
+/* Modern Card Layouts */
+.zenith-card {
+    background: var(--bg-box);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--zenith-border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-main);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-main);
+}
+
+.zenith-card:hover {
+    border-color: rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 15px 40px rgba(var(--primary-rgb), 0.1);
+    transform: translateY(-5px);
+}
+
+.zenith-card-header {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.zenith-card-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-bright);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Tab System */
+.zenith-tabs-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: var(--border-light);
+    padding: 8px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.zenith-tab-link {
+    padding: 10px 24px;
+    border-radius: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.zenith-tab-link:hover {
+    color: var(--text-bright);
+    background: rgba(var(--primary-rgb), 0.05);
+}
+
+.zenith-tab-link.active {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+/* Modern Inputs */
+.zenith-input-group { margin-bottom: 24px; }
+.zenith-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.zenith-control {
+    width: 100%;
+    background: var(--bg-body) !important;
+    border: 1px solid var(--zenith-border) !important;
+    border-radius: 12px !important;
+    padding: 12px 18px !important;
+    color: var(--text-main) !important;
+    font-size: 14px !important;
+    transition: all 0.3s !important;
+}
+
+.zenith-control:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.2) !important;
+    outline: none !important;
+}
+
+/* Custom Checkbox/Switch */
+.zenith-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 22px;
+}
+
+.zenith-switch input { opacity: 0; width: 0; height: 0; }
+.zenith-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--border-color);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.zenith-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; width: 16px;
+    left: 4px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .zenith-slider { background: var(--primary-gradient); }
+input:checked + .zenith-slider:before { transform: translateX(22px); }
+
+/* Table Overhaul */
+.zenith-table-container {
+    background: var(--bg-box);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--zenith-border);
+    box-shadow: var(--shadow-main);
+}
+
+.zenith-table thead {
+    background: var(--border-light);
+}
+
+.zenith-table th {
+    color: var(--text-bright) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    padding: 18px 20px !important;
+}
+
+.zenith-table td {
+    padding: 15px 20px !important;
+    color: var(--text-main) !important;
+    border-top: 1px solid var(--border-light) !important;
+    vertical-align: middle !important;
+}
+
+.zenith-table tr:hover { background: rgba(var(--primary-rgb), 0.05); }
+
+/* Buttons */
+.btn-zenith {
+    background: var(--primary-gradient) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 10px 25px !important;
+    font-weight: 700 !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s !important;
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn-zenith:hover {
+    box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.4) !important;
+    transform: translateY(-2px);
+}
+
+/* Skyblue Specific Refinements */
+[data-theme="skyblue"] .zenith-card {
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(2, 132, 199, 0.05) !important;
+}
+
+[data-theme="skyblue"] .zenith-tabs-nav {
+    background: #f1f5f9 !important;
+}
+
+[data-theme="skyblue"] .zenith-control {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+
+[data-theme="skyblue"] .zenith-slider {
+    background-color: #cbd5e1;
+}
+

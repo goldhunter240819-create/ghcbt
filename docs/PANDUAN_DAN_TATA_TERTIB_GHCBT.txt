@@ -1,0 +1,107 @@
+========================================================================
+           PANDUAN PENGGUNAAN DAN TATA TERTIB SISTEM GHCBT
+      (Global High-performance Computer Based Test - Platform Pro)
+========================================================================
+
+GHCBT adalah platform ujian berbasis komputer yang dirancang untuk
+memberikan pengalaman ujian yang modern, aman, dan efisien dengan
+basis pengamatan cerdas (AI Assistant Monitoring).
+
+------------------------------------------------------------------------
+I. PANDUAN ADMINISTRATOR (GURU/PENGAWAS)
+------------------------------------------------------------------------
+
+1. LOGIN ADMIN
+   - Akses halaman admin dengan kredensial yang telah disediakan.
+   - Dashboard utama menampilkan ringkasan data peserta, soal, dan
+     pelanggaran yang terdeteksi secara real-time.
+
+2. MANAJEMEN DATA SISWA
+   - Daftarkan siswa ke dalam 'Grup' yang sesuai.
+   - Gunakan fitur "Reset Login" jika siswa mengalami kendala koneksi
+     atau tidak sengaja keluar dari sesi tanpa menyelesaikan ujian.
+
+3. PENGATURAN SOAL (BANK SOAL)
+   - Soal dikelola secara hierarkis: Modul -> Topik -> Soal.
+   - Mendukung berbagai jenis soal (Pilihan Ganda & Essay) serta
+     pengunggahan gambar/audio/video.
+
+4. PENJADWALAN UJIAN (DAFTAR UJIAN)
+   - Buat jadwal ujian di menu "Daftar Ujian".
+   - Atur: Nama Ujian, Waktu Mulai/Selesai, Durasi, dan Token.
+   - Aktifkan fitur "Intro Ujian" untuk memberi instruksi awal.
+
+5. PENGAWASAN RADAR AI (URSA)
+   - Gunakan Dashboard Admin sebagai layar radar pengawas.
+   - Asisten Suara "Ursa" akan bersuara secara otomatis memberi tahu jika:
+     a. Ada siswa yang melakukan PELANGGARAN (Keluar dari aplikasi).
+     b. Ada siswa yang meminta BUKA KUNCI (Unlock Request).
+     c. Ada siswa yang meminta RESET LOGIN.
+   - Fitur ini membantu pengawas agar tidak perlu melihat monitor terus-menerus.
+
+------------------------------------------------------------------------
+II. PANDUAN PENGGUNAAN SISWA
+------------------------------------------------------------------------
+
+1. PROSES LOGIN
+   - Masukkan Username dan Password Anda di portal GHCBT.
+   - Pastikan data profil yang muncul sudah sesuai sebelum lanjut.
+
+2. MENGERJAKAN UJIAN
+   - Pilih ujian yang tersedia di daftar "Ujian Aktif".
+   - Masukkan TOKEN jika diminta oleh pengawas.
+   - Klik "Kerjakan" untuk memulai. Durasi akan berjalan otomatis.
+
+3. SISTEM ANTI-CURANG (AUTO-LOCK)
+   - SISTEM INI SANGAT KETAT. Jika Anda berpindah aplikasi, membuka
+     tab baru, atau meminimalkan browser, ujian akan TERKUNCI OTOMATIS.
+   - Layar akan berubah menjadi merah dan tidak bisa lanjut mengerjakan.
+
+4. PROSEDUR BUKA KUNCI
+   - Jika terkunci, Anda harus menekan tombol "Request Unlock".
+   - Tunggu hingga pengawas membuka kunci Anda secara remote melalui
+     sistem admin. Baru setelah itu Anda bisa melanjutkan soal sisa.
+
+------------------------------------------------------------------------
+III. TATA TERTIB PELAKSANAAN UJIAN
+------------------------------------------------------------------------
+
+1. Peserta wajib login paling lambat 10 menit sebelum ujian dimulai.
+2. Peserta dilarang membawa catatan, buku, atau alat bantu lainnya.
+3. Peserta hanya diperbolehkan membuka tab browser ujian GHCBT.
+4. Segala bentuk aktivitas memindahkan tab, membuka aplikasi lain,
+   atau menyontek akan tercatat secara otomatis di sistem pengawas.
+5. Peserta yang terdeteksi melakukan pelanggaran lebih dari batas yang
+   ditentukan dapat didiskualifikasi secara otomatis.
+6. Pastikan baterai perangkat dan koneksi internet dalam keadaan stabil.
+7. Kerjakan dengan jujur, mandiri, dan teliti.
+
+------------------------------------------------------------------------
+IV. DAFTAR TINDAKAN PELANGGARAN (SISTEM DETEKSI OTOMATIS)
+------------------------------------------------------------------------
+
+Sistem GHCBT dilengkapi dengan AI Monitoring real-time yang akan langsung
+MENGUNCI UJIAN secara otomatis jika Anda melakukan hal berikut:
+
+1. BERPINDAH TAB: Mencoba membuka tab baru atau berpindah ke tab lain
+   selain halaman ujian.
+2. MINIMIZE APLIKASI: Menekan tombol 'Home', 'Recent Apps', atau
+   meminimalkan jendela browser (Alt+Tab).
+3. MEMBUKA NOTIFIKASI: Menarik bilah notifikasi atau mencoba membalas
+   pesan (WA/SMS/Telepon) saat ujian berlangsung.
+4. FLOATING WINDOWS: Mengaktifkan aplikasi melayang (floating apps)
+   atau mode split-screen (layar belah).
+5. DISKONEKSI INTERNET: Sengaja mematikan Wi-Fi atau Data Seluler
+   untuk mencoba mengelabui sistem waktu.
+6. SCREENSHOT/RECORDING: Mencoba mengambil tangkapan layar atau
+   merekam layar saat soal sedang ditampilkan.
+7. QUICK ACCESS PANEL: Membuka pengaturan cepat (Kecerahan/Volume/Wi-Fi)
+   melalui bilah atas/bawah sistem.
+
+CATATAN: Setiap tindakan di atas akan tercatat di log Guru/Pengawas dengan
+alasan yang spesifik. Lakukan koordinasi dengan pengawas jika terjadi
+gangguan teknis yang tidak disengaja.
+
+========================================================================
+                 Selamat Mengerjakan & Semoga Sukses!
+========================================================================
