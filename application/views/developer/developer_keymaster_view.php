@@ -6,8 +6,8 @@
                     <i class="fa fa-key fa-2x"></i>
                 </div>
                 <div>
-                    <h2 style="margin: 0; font-weight: 800; letter-spacing: -0.5px; color: #fff;">ZENITH KEYMASTER PRO</h2>
-                    <p style="margin: 0; color: #64748b; font-size: 13px;">Sistem Otomasi Lisensi Hardware & Manajemen Penjualan</p>
+                    <h2 style="margin: 0; font-weight: 900; letter-spacing: -0.5px; color: #fff;">GHCBT KEYMASTER PRO</h2>
+                    <p style="margin: 0; color: #94a3b8; font-size: 13px;">Sistem Otomasi Lisensi Hardware & Manajemen Penjualan</p>
                 </div>
             </div>
 
