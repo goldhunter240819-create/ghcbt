@@ -8,8 +8,13 @@ echo       GHCBT ELITE - AUTO VERSION BUMP ^& GIT PUSH
 echo ========================================================
 echo.
 
+:: Path PHP di XAMPP
+set PHP_BIN=C:\xampp\php\php.exe
+if not exist "%PHP_BIN%" set PHP_BIN=php
+
 :: 1. Jalankan script PHP untuk menaikkan nomor versi
 for /f "delims=" %%v in ('C:\xampp\php\php.exe developer_tools\bump_version.php') do set NEW_VER=%%v
+for /f "delims=" %%v in ('"%PHP_BIN%" developer_tools\bump_version.php') do set NEW_VER=%%v
 
 if "%NEW_VER%"=="" (
     echo [ERROR] Gagal membaca atau menaikkan versi.
@@ -25,12 +30,17 @@ set /p MSG="Masukkan pesan update (atau tekan Enter untuk default): "
 if "%MSG%"=="" set MSG=Pembaruan sistem dan optimasi fitur
 
 :: 3. Git Add & Commit
+:: 3. Cegah double bump di hook git
+set SKIP_BUMP=1
+
+:: 4. Git Add & Commit
 echo.
 echo Menyiapkan file ke Git...
 git add .
 git commit -m "release: v%NEW_VER% - %MSG%"
 
 :: 4. Git Push
+:: 5. Git Push
 echo.
 echo Mengunggah ke GitHub (git push origin main)...
 git push origin main
@@ -51,3 +61,4 @@ if %ERRORLEVEL% EQU 0 (
 
 echo.
 pause
+

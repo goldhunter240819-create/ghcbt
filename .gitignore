@@ -29,6 +29,13 @@ public/uploads/*
 Thumbs.db
 Desktop.ini
 .DS_Store
+*.zip
+*.tar.gz
+_backup_config/
+_update_extracted/
+_update_temp.zip
+
+
 
 # 6. IDE & Editor Files
 .idea/

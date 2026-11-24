@@ -1,46 +1,57 @@
-<section class="content-header" style="padding: 35px 35px 10px 35px;">
-	<h1 style="color: #f1f5f9; font-weight: 900; letter-spacing: -0.5px;">
-		<span class="gold-text">Suite Branding</span>
-		<small style="color: rgba(245, 158, 11, 0.6); font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Isolated Visual Identity</small>
-	</h1>
-</section>
+<!-- Content Header Banner -->
+<div class="content-header-banner">
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 55px; height: 55px; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.4); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 24px; flex-shrink: 0; backdrop-filter: blur(10px);">
+            <i class="fa fa-paint-brush"></i>
+        </div>
+        <div>
+            <h2>Suite Branding</h2>
+            <p>Manajemen Logo Pusat Developer Suite & Sinkronisasi Real-time Favicon Tab</p>
+        </div>
+    </div>
+    <div class="banner-badge-status">
+        <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span> BRANDING SYNCED
+    </div>
+</div>
 
-<section class="content" style="padding: 20px 30px;">
+<section class="content" style="padding: 0;">
     <div class="row">
         <!-- Developer Logo & Favicon Unified Control -->
         <div class="col-md-8 col-md-offset-2">
             <div class="elite-card">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 35px; border-left: 4px solid var(--gold-primary); padding-left: 20px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--border-light);">
                     <div>
-                        <h3 style="margin:0; font-weight: 900; color: #f8fafc; font-size: 18px; text-transform: uppercase;">Central Branding Logo</h3>
-                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #64748b;">Logo ini akan digunakan sebagai identitas Sidebar sekaligus Icon Tab Browser.</p>
+                        <h3 style="margin: 0; font-weight: 800; color: #0f172a; font-size: 16px; text-transform: uppercase;">Central Branding Logo</h3>
+                        <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">Logo ini akan digunakan sebagai identitas Sidebar sekaligus Icon Tab Browser.</p>
                     </div>
                 </div>
 
-                <div style="background: rgba(2, 6, 23, 0.4); border-radius: 24px; padding: 60px; text-align: center; border: 2px dashed rgba(245, 158, 11, 0.2); position: relative; margin-bottom: 35px;">
-                    <div style="position: absolute; top: 15px; left: 20px; font-size: 9px; color: rgba(245, 158, 11, 0.5); font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Visual Preview</div>
-                    <img id="preview-logo" src="<?php echo base_url().$dev_logo; ?>?t=<?php echo time(); ?>" style="max-height: 120px; filter: drop-shadow(0 0 30px rgba(245, 158, 11, 0.4));" />
+                <div style="background: #f8fafc; border-radius: 18px; padding: 40px; text-align: center; border: 2px dashed var(--border-color); position: relative; margin-bottom: 25px;">
+                    <div style="position: absolute; top: 12px; left: 16px; font-size: 10px; color: #64748b; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">Visual Preview</div>
+                    <img id="preview-logo" src="<?php echo base_url().$dev_logo; ?>?t=<?php echo time(); ?>" style="max-height: 100px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));" />
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; flex-direction: column; gap: 15px;">
                     <input type="file" id="file-logo" style="display:none;" accept="image/*">
-                    <button class="btn btn-gold-elite" style="width: 100%; padding: 20px !important; font-size: 13px !important;" onclick="$('#file-logo').click()">
-                        <i class="fa fa-cloud-upload"></i> Upload & Sync Branding
+                    <button class="btn btn-gold-elite" style="width: 100%; padding: 15px !important; font-size: 13px !important;" onclick="$('#file-logo').click()">
+                        <i class="fa fa-cloud-upload" style="margin-right: 6px;"></i> Upload & Sinkronkan Branding
                     </button>
                     
                     <div id="progress-logo" style="display:none;">
-                        <div class="progress" style="height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; margin: 0;">
-                            <div class="progress-bar" style="background: var(--gold-gradient); width: 0%; transition: width 0.3s ease;"></div>
+                        <div class="progress" style="height: 8px; background: #e2e8f0; border-radius: 10px; margin: 0;">
+                            <div class="progress-bar" style="background: var(--primary-gradient); width: 0%; transition: width 0.3s ease;"></div>
                         </div>
-                        <p style="text-align: center; font-size: 10px; color: var(--gold-primary); margin-top: 10px; font-weight: 800; letter-spacing: 1px;">OPTIMIZING ASSETS...</p>
+                        <p style="text-align: center; font-size: 11px; color: var(--gold-primary); margin-top: 8px; font-weight: 800; letter-spacing: 0.5px;">MENGUNGGAH & MENGOPTIMASI ASET...</p>
                     </div>
                 </div>
             </div>
 
-            <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 24px; padding: 30px; box-shadow: inset 0 0 20px rgba(245, 158, 11, 0.05); margin-top: 30px;">
-                <h4 style="color: var(--gold-primary); font-weight: 900; font-size: 14px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;"><i class="fa fa-refresh"></i> Unified Sync Protocol</h4>
-                <p style="color: #94a3b8; line-height: 1.8; font-size: 13px; margin: 0;">
-                    Untuk efisiensi, gambar yang Anda unggah di sini akan secara otomatis ditarik sebagai <b class="gold-text">Favicon (Icon Tab)</b>. Sistem Zenith akan meluncurkan pembaruan visual secara instan pada Sidebar dan Tab Browser Anda setelah proses sinkronisasi selesai.
+            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 18px; padding: 22px; margin-top: 20px;">
+                <h4 style="color: #92400e; font-weight: 800; font-size: 14px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa fa-refresh" style="color: #b45309;"></i> Unified Sync Protocol
+                </h4>
+                <p style="color: #78350f; line-height: 1.6; font-size: 13px; margin: 0;">
+                    Untuk efisiensi, gambar yang Anda unggah di sini akan secara otomatis dijadikan sebagai <strong>Favicon (Icon Tab)</strong> dan Logo Sidebar. Sistem akan memperbarui tampilan visual secara instan pada sidebar dan tab browser setelah proses unggah selesai.
                 </p>
             </div>
         </div>
@@ -56,7 +67,6 @@
             form_data.append('type', 'logo');
 
             $('#progress-logo').fadeIn().find('.progress-bar').css('width', '0%');
-            $("#modal-proses").modal('show');
 
             $.ajax({
                 url: "<?php echo site_url('developer/save_branding'); ?>",
@@ -76,8 +86,7 @@
                     return xhr;
                 },
                 success: function(respon){
-                    $("#modal-proses").modal('hide');
-                    $('#progress-logo').delay(500).fadeOut();
+                    $('#progress-logo').delay(400).fadeOut();
                     
                     try {
                         var obj = $.parseJSON(respon);
@@ -98,12 +107,13 @@
                         } else {
                             notify_error(obj.pesan);
                         }
-                    } catch(e) { notify_error('Respon sistem tidak valid.'); }
+                    } catch(e) {
+                        notify_error('Respon server tidak valid.');
+                    }
                 },
                 error: function(){
-                    $("#modal-proses").modal('hide');
                     $('#progress-logo').hide();
-                    notify_error('Gagal melakukan sinkronisasi branding.');
+                    notify_error('Koneksi terputus saat mengunggah aset.');
                 }
             });
         });

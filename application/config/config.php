@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['upload_path'] = 'uploads';
 $config['upload_public_path'] = 'public/uploads/';
 $config['site_name'] = 'Ujian Berbasis Komputer';
-$config['site_version'] = '26.2.2.1';
+$config['site_version'] = '26.2.2.3';
+$config['site_version'] = '26.2.2.3';
 $config['maintenance_mode'] = 'FALSE';
 
 /*

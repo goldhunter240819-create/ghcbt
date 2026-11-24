@@ -10,6 +10,13 @@ $config_file  = dirname(__DIR__) . '/application/config/config.php';
 $current_version = file_exists($version_file) ? trim(file_get_contents($version_file)) : '26.2.2.0';
 
 // Match 26.2.2.X or any prefix ending with number
+// Jika opsi --peek diberikan, hanya tampilkan versi saat ini tanpa menaikkan
+if (isset($argv[1]) && $argv[1] === '--peek') {
+    echo $current_version;
+    exit(0);
+}
+
+// Increment: ambil angka di bagian paling akhir
 if (preg_match('/^(.*?)(\d+)$/', $current_version, $matches)) {
     $prefix = $matches[1];
     $num = intval($matches[2]) + 1;
@@ -32,3 +39,4 @@ if (file_exists($config_file)) {
 }
 
 echo $new_version;
+

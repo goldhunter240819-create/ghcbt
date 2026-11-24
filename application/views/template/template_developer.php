@@ -236,7 +236,7 @@
           align-items: center; 
           gap: 12px; 
           text-decoration: none; 
-          border-radius: 10px; 
+          border-radius: 12px; 
           transition: all 0.2s ease; 
           margin-bottom: 5px; 
           font-size: 11.5px; 
@@ -254,18 +254,70 @@
           color: #ffffff !important; 
           font-weight: 800;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
-          border-left: 4px solid #ffffff;
+          border-left: 4px solid #fde047;
       }
-      .sidebar-menu li a i { font-size: 15px; width: 22px; text-align: center; opacity: 0.9; }
+      .sidebar-menu li a i { font-size: 15px; width: 22px; text-align: center; color: #fde047; }
 
       /* --- CONTENT AREA (MATCHING CBT LIGHT) --- */
       .content-wrapper { 
           margin-left: 230px !important; 
           background: var(--bg-body) !important; 
-          padding: 24px 28px 80px !important; 
+          padding: 24px 28px 40px !important; 
           margin-top: 56px !important;
-          min-height: calc(100vh - 56px) !important; 
+          min-height: calc(100vh - 56px - 48px) !important; 
           box-sizing: border-box !important;
+      }
+
+      /* UNIVERSAL HIGH-CONTRAST TYPOGRAPHY OVERRIDES */
+      .content-wrapper h1, 
+      .content-wrapper h2, 
+      .content-wrapper h3, 
+      .content-wrapper h4, 
+      .content-wrapper h5, 
+      .content-wrapper h6 {
+          color: #0f172a;
+      }
+      .content-header h1 {
+          color: #0f172a !important;
+      }
+      .content-header h1 small {
+          color: #64748b !important;
+      }
+      .gold-text {
+          color: #b45309 !important;
+      }
+      .elite-card {
+          color: #1e293b !important;
+      }
+      .elite-card h1, .elite-card h2, .elite-card h3, .elite-card h4, .elite-card h5, .elite-card h6 {
+          color: #0f172a !important;
+      }
+      .elite-card p {
+          color: #475569;
+      }
+      .elite-card label {
+          color: #334155 !important;
+      }
+      .elite-card .text-muted {
+          color: #64748b !important;
+      }
+      .box {
+          background: #ffffff !important;
+          border: 1px solid var(--border-light) !important;
+          border-radius: 16px !important;
+          box-shadow: var(--shadow-floating) !important;
+          color: #1e293b !important;
+      }
+      .box-header {
+          border-bottom: 1px solid var(--border-light) !important;
+          color: #0f172a !important;
+      }
+      .box-header .box-title {
+          color: #0f172a !important;
+          font-weight: 800 !important;
+      }
+      .box-body {
+          color: #334155 !important;
       }
 
       /* UNIVERSAL PAGE BANNER */
@@ -287,18 +339,18 @@
           font-weight: 900;
           font-size: 22px;
           letter-spacing: -0.5px;
-          color: #ffffff;
+          color: #ffffff !important;
       }
       .content-header-banner p {
           margin: 4px 0 0;
           font-size: 13px;
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(255, 255, 255, 0.9) !important;
           font-weight: 500;
       }
       .banner-badge-status {
           background: rgba(255, 255, 255, 0.2);
           border: 1px solid rgba(255, 255, 255, 0.35);
-          color: #ffffff;
+          color: #ffffff !important;
           font-weight: 800;
           font-size: 11px;
           padding: 8px 18px;
@@ -403,18 +455,19 @@
       .main-footer {
           background: #ffffff !important;
           border-top: 1px solid var(--border-light) !important;
-          position: fixed !important;
-          bottom: 0 !important;
-          left: 230px !important;
-          right: 0 !important;
+          position: relative !important;
+          margin-left: 230px !important;
+          margin-right: 0 !important;
+          margin-top: 0 !important;
           height: 48px !important;
-          padding: 0 25px !important;
+          padding: 0 28px !important;
           display: flex;
           align-items: center;
           justify-content: space-between;
           font-size: 12px;
           color: var(--text-muted);
-          z-index: 1020;
+          z-index: 10;
+          box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.03);
       }
       .footer-badge {
           background: var(--primary-gradient);

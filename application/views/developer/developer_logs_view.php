@@ -1,18 +1,32 @@
-<section class="content-header" style="padding: 35px 35px 10px 35px;">
-	<h1 style="color: #f1f5f9; font-weight: 900; letter-spacing: -0.5px;">
-		<span class="gold-text">Log Explorer</span>
-		<small style="color: rgba(245, 158, 11, 0.6); font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Neural System Forensics</small>
-	</h1>
-</section>
+<!-- Content Header Banner -->
+<div class="content-header-banner">
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 55px; height: 55px; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.4); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 24px; flex-shrink: 0; backdrop-filter: blur(10px);">
+            <i class="fa fa-terminal"></i>
+        </div>
+        <div>
+            <h2>Log Explorer</h2>
+            <p>Pemeriksaan Forensik Catatan Aktivitas & Riwayat Error Engine GHCBT</p>
+        </div>
+    </div>
+    <div class="banner-badge-status">
+        <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981;"></span> FORENSIC STREAM ACTIVE
+    </div>
+</div>
 
-<section class="content" style="padding: 20px 30px;">
+<section class="content" style="padding: 0;">
     <div class="row">
         <div class="col-xs-12">
             <div class="elite-card">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; border-left: 4px solid var(--gold-primary); padding-left: 20px;">
-                    <h3 style="margin:0; font-weight: 900; color: #f8fafc; font-size: 18px; text-transform: uppercase; letter-spacing: 1px;">Daily System Logs</h3>
-                    <button class="btn" id="btn-clear-logs" style="border-radius: 12px; font-weight: 700; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.2); color: #f43f5e; padding: 10px 20px; transition: all 0.3s ease;">
-                        <i class="fa fa-trash"></i> Nuke All Logs
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--border-light); flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <h3 style="margin: 0; font-weight: 800; color: #0f172a; font-size: 16px; text-transform: uppercase; letter-spacing: 0.8px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa fa-file-text-o" style="color: var(--gold-primary);"></i> Daily System Logs
+                        </h3>
+                        <p style="margin: 4px 0 0; color: #64748b; font-size: 12px;">Daftar berkas log runtime yang tersimpan di direktori aplikasi</p>
+                    </div>
+                    <button class="btn" id="btn-clear-logs" style="border-radius: 12px; font-weight: 800; background: #fef2f2; border: 1px solid #fecdd3; color: #dc2626; padding: 10px 20px; transition: all 0.25s ease; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                        <i class="fa fa-trash" style="margin-right: 6px;"></i> Nuke All Logs
                     </button>
                 </div>
 
@@ -20,38 +34,39 @@
                     <table class="table elite-table">
                         <thead>
                             <tr>
-                                <th style="padding: 15px;">Source Filename</th>
-                                <th style="padding: 15px; text-align: center;">Size</th>
-                                <th style="padding: 15px; text-align: center;">Timestamp</th>
-                                <th style="padding: 15px; text-align: right;">Operations</th>
+                                <th style="padding: 12px 15px;">Source Filename</th>
+                                <th style="padding: 12px 15px; text-align: center;">Size</th>
+                                <th style="padding: 12px 15px; text-align: center;">Timestamp</th>
+                                <th style="padding: 12px 15px; text-align: right;">Operations</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if(!empty($logs)): foreach($logs as $log): ?>
                             <tr>
-                                <td style="padding: 18px 15px; font-weight: 600; color: #e2e8f0;">
-                                    <i class="fa fa-file-code-o" style="margin-right: 15px; color: var(--gold-primary); opacity: 0.7;"></i> 
+                                <td style="padding: 14px 15px; font-weight: 700; color: #0f172a;">
+                                    <i class="fa fa-file-code-o" style="margin-right: 12px; color: var(--gold-primary);"></i> 
                                     <?php echo $log['filename']; ?>
                                 </td>
-                                <td style="padding: 18px 15px; text-align: center;">
-                                    <span style="background: rgba(245, 158, 11, 0.15); color: var(--gold-primary); padding: 4px 12px; border-radius: 10px; font-size: 10px; font-weight: 900; border: 1px solid rgba(245, 158, 11, 0.3);">
+                                <td style="padding: 14px 15px; text-align: center;">
+                                    <span style="background: #fffbeb; color: #b45309; padding: 4px 12px; border-radius: 10px; font-size: 11px; font-weight: 800; border: 1px solid #fde68a;">
                                         <?php echo $log['size']; ?> KB
                                     </span>
                                 </td>
-                                <td style="padding: 18px 15px; text-align: center; font-size: 12px; font-family: 'JetBrains Mono', monospace; color: #64748b;">
+                                <td style="padding: 14px 15px; text-align: center; font-size: 12px; font-family: 'JetBrains Mono', monospace; color: #64748b; font-weight: 600;">
                                     <?php echo $log['date']; ?>
                                 </td>
-                                <td style="padding: 18px 15px; text-align: right;">
-                                    <button class="btn btn-gold-elite btn-view-log" data-file="<?php echo $log['filename']; ?>" style="padding: 6px 15px !important; font-size: 11px !important;">
-                                        <i class="fa fa-terminal"></i> Read Log
+                                <td style="padding: 14px 15px; text-align: right;">
+                                    <button class="btn btn-gold-elite btn-view-log" data-file="<?php echo $log['filename']; ?>" style="padding: 7px 16px !important; font-size: 11px !important;">
+                                        <i class="fa fa-terminal" style="margin-right: 5px;"></i> Read Log
                                     </button>
                                 </td>
                             </tr>
                             <?php endforeach; else: ?>
                             <tr>
-                                <td colspan="4" class="text-center" style="padding: 80px; color: #475569;">
-                                    <i class="fa fa-shield" style="font-size: 60px; margin-bottom: 20px; display: block; opacity: 0.1;"></i>
-                                    Neural pathways are clear. No system logs detected.
+                                <td colspan="4" class="text-center" style="padding: 60px 20px; color: #64748b;">
+                                    <i class="fa fa-shield" style="font-size: 50px; margin-bottom: 15px; display: block; color: #cbd5e1;"></i>
+                                    <strong style="color: #0f172a; font-size: 14px; display: block; margin-bottom: 5px;">Sistem Bersih</strong>
+                                    Tidak ada catatan error atau berkas log harian yang terdeteksi.
                                 </td>
                             </tr>
                             <?php endif; ?>
@@ -66,16 +81,16 @@
 <!-- Modal Baca Log -->
 <div class="modal fade" id="modal-view-log" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content" style="background: #020617 !important; border: 2px solid var(--gold-primary) !important; border-radius: 28px !important; color: #e2e8f0 !important; overflow: hidden; box-shadow: var(--gold-glow-strong) !important;">
-            <div class="modal-header" style="background: rgba(245, 158, 11, 0.03); color: white; padding: 25px; border-bottom: 1px solid rgba(245, 158, 11, 0.2);">
-                <button type="button" class="close" data-dismiss="modal" style="color: white; opacity: 0.5;"><span>&times;</span></button>
-                <h4 class="modal-title" id="log-title" style="font-weight: 900; color: var(--gold-primary); letter-spacing: 2px; text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);"><i class="fa fa-terminal"></i> LOG DECRYPTOR</h4>
+        <div class="modal-content" style="background: #0f172a !important; border: 2px solid var(--gold-primary) !important; border-radius: 20px !important; color: #f1f5f9 !important; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important;">
+            <div class="modal-header" style="background: rgba(245, 158, 11, 0.1); color: white; padding: 20px 25px; border-bottom: 1px solid rgba(245, 158, 11, 0.2);">
+                <button type="button" class="close" data-dismiss="modal" style="color: white; opacity: 0.7;"><span>&times;</span></button>
+                <h4 class="modal-title" id="log-title" style="font-weight: 800; color: #fbbf24; letter-spacing: 1px;"><i class="fa fa-terminal"></i> LOG DECRYPTOR</h4>
             </div>
             <div class="modal-body" style="padding: 25px;">
-                <pre id="log-content" style="background: #000000 !important; color: var(--gold-secondary) !important; border: 1px solid rgba(245, 158, 11, 0.2) !important; border-radius: 16px; padding: 25px; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 12px; max-height: 500px; overflow-y: auto; line-height: 1.8; box-shadow: inset 0 0 20px rgba(245, 158, 11, 0.05);">Initializing neural log stream...</pre>
+                <pre id="log-content" style="background: #020617 !important; color: #fbbf24 !important; border: 1px solid rgba(245, 158, 11, 0.2) !important; border-radius: 14px; padding: 20px; font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 12px; max-height: 480px; overflow-y: auto; line-height: 1.8;">Memuat berkas log...</pre>
             </div>
-            <div class="modal-footer" style="padding: 20px; border-top: 1px solid rgba(255,255,255,0.05);">
-                <button type="button" class="btn" data-dismiss="modal" style="background: rgba(255,255,255,0.05); color: #cbd5e1; border:none; border-radius: 12px; padding: 10px 25px; font-weight: 700;">Close Shield</button>
+            <div class="modal-footer" style="padding: 15px 25px; border-top: 1px solid rgba(255,255,255,0.08);">
+                <button type="button" class="btn" data-dismiss="modal" style="background: rgba(255,255,255,0.1); color: #ffffff; border: none; border-radius: 10px; padding: 8px 20px; font-weight: 700;">Tutup</button>
             </div>
         </div>
     </div>
@@ -87,7 +102,7 @@
         $('.btn-view-log').click(function(){
             var filename = $(this).data('file');
             $('#log-title').html('<i class="fa fa-terminal"></i> ' + filename);
-            $('#log-content').html('Decrypting data blocks...');
+            $('#log-content').html('Membaca isi berkas log...');
             $('#modal-view-log').modal('show');
             
             $.get('<?php echo site_url("developer/get_log_detail"); ?>/' + filename, function(data){
@@ -97,14 +112,15 @@
 
         // Bersihkan Semua Log
         $('#btn-clear-logs').click(function(){
-            if(confirm('Are you sure you want to NUKE ALL system logs? This action is irreversible.')){
-                $("#modal-proses").modal('show');
-                $.getJSON('<?php echo site_url("developer/clear_logs"); ?>', function(data){
-                    if(data.status == 1){
-                        notify_success(data.pesan);
+            if(confirm('Peringatan: Anda yakin ingin menghapus SEMUA berkas log sistem?')){
+                $.post('<?php echo site_url("developer/clear_logs"); ?>', function(respon){
+                    var obj = $.parseJSON(respon);
+                    if(obj.status == 1){
+                        notify_success(obj.pesan);
                         setTimeout(function(){ location.reload(); }, 1000);
+                    }else{
+                        notify_error(obj.pesan);
                     }
-                    $("#modal-proses").modal('hide');
                 });
             }
         });
